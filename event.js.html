@@ -30,7 +30,12 @@
 
 /**
  * @module Event
-*/
+ */
+
+/**
+ * If authentication is required, a header must be included in the form of:
+ * ex. Cookie:uid=40
+ */
 
 Object.assign(exports, {
   createEvent,
@@ -45,17 +50,19 @@ Object.assign(exports, {
 
 /**
  * Create a new event
- * @param {Context} context
- * @param {Object} params
- * @param {String} params.sport
- * @param {Number} params.ts - Timestamp
- * @param {Number} params.lat
- * @param {Number} params.lon
- * @param {String} params.title
- * @param {String} [params.description]
- * @param {String} [params.difficulty] - Should be one of beginner, intermediate, or expert
- * @param {String} [params.url] - The URL of the event's picture
- * @return {Object.&lt;Number>} id - The id of the created event
+ *
+ * @description POST /api/createEvent
+ * @summary Authentication is required
+ *
+ * @param {String} sport
+ * @param {Number} ts - Timestamp
+ * @param {Number} lat
+ * @param {Number} lon
+ * @param {String} title
+ * @param {String} [description]
+ * @param {String} [difficulty] - Should be one of beginner, intermediate, or expert
+ * @param {String} [url] - The URL of the event's picture
+ * @return {Number} id - The id of the created event
  */
 async function createEvent({ services, context }, params) {
   const id = await services.event.create(context, params);
@@ -64,10 +71,11 @@ async function createEvent({ services, context }, params) {
 
 /**
  * Get an event
- * @param {Context} context
- * @param {Object} params
- * @param {Number} params.eid - The event id
- * @return {Object.&lt;Event>} event
+ * 
+ * POST /api/getEvent
+ *
+ * @param {Number} eid - The event id
+ * @return {Event} event
  */
 async function getEvent({ services, context }, params) {
   const event = await services.event.get(context, params);
@@ -76,18 +84,19 @@ async function getEvent({ services, context }, params) {
 
 /**
  * Update an event
- * @param {Context} context
- * @param {Object} params
- * @param {Number} params.eid
- * @param {String} [params.sport]
- * @param {Number} [params.ts]
- * @param {Number} [params.lat]
- * @param {Number} [params.lon]
- * @param {String} [params.title]
- * @param {String} [params.description]
- * @param {String} [params.difficulty]
- * @param {String} [params.url]
- * @return {Object.&lt;Void>}
+ * 
+ * @description POST /api/updateEvent
+ * @summary Authentication is required
+ * @param {Number} eid
+ * @param {String} [sport]
+ * @param {Number} [ts]
+ * @param {Number} [lat]
+ * @param {Number} [lon]
+ * @param {String} [title]
+ * @param {String} [description]
+ * @param {String} [difficulty]
+ * @param {String} [url]
+ * @return {Void}
  */
 function updateEvent({ services, context }, params) {
   return services.event.update(context, params);
@@ -95,10 +104,12 @@ function updateEvent({ services, context }, params) {
 
 /**
  * Delete an event
- * @param {Context} context
- * @param {Object} params
- * @param {Number} params.eid
- * @return {Object.&lt;Void>}
+ * 
+ * @description POST /api/deleteEvent
+ * @summary Authentication is required
+ *
+ * @param {Number} eid
+ * @return {Void}
  */
 async function deleteEvent({ services, context }, params) {
   await services.event.delete(context, params);
@@ -106,10 +117,11 @@ async function deleteEvent({ services, context }, params) {
 
 /**
  * Get a list of RSVPs for a User
- * @param {Context} context
- * @param {Object} params
- * @param {Number} params.uid - The id of the User
- * @return {Object.&lt;RSVP[]>} rsvps - A list of RSVPs
+ * 
+ * POST /api/getUserRSVPs
+ *
+ * @param {Number} uid - The id of the User
+ * @return {RSVP[]} rsvps - A list of RSVPs
  */
 async function getUserRSVPs({ services, context }, params) {
   const rsvps = await services.event.getUserRSVPs(context, params);
@@ -118,10 +130,11 @@ async function getUserRSVPs({ services, context }, params) {
 
 /**
  * Get a list of RSVPs for an Event
- * @param {Context} context
- * @param {Object} params
- * @param {Number} params.eid - The id of the event
- * @return {Object.&lt;RSVP[]>} - A list of RSVPs
+ * 
+ * POST /api/getEventRSVPs
+ *
+ * @param {Number} eid - The id of the event
+ * @return {RSVP[]} - A list of RSVPs
  */
 async function getEventRSVPs({ services, context }, params) {
   const rsvps = await services.event.getEventRSVPs(context, params);
@@ -130,13 +143,15 @@ async function getEventRSVPs({ services, context }, params) {
 
 /**
  * Update an RSVP response
- * @param {Context} context
- * @param {Object} params
- * @param {Number} params.uid - The uid of the rsvp owner
- * @param {Number} params.eid - The id of the event 
- * @param {String} params.status - The updated attendance status of user
- * @param {String} [params.reason] - Reason will be null if status changes
- * @return {Object.&lt;Void>}
+ * 
+ * @description POST /api/updateRSVP
+ * @summary Authentication is required
+ *
+ * @param {Number} uid - The uid of the rsvp owner
+ * @param {Number} eid - The id of the event 
+ * @param {String} status - The updated attendance status of user
+ * @param {String} [reason] - Reason will be null if status changes
+ * @return {Void}
 */
 function updateRSVP({ services, context }, params) {
   return services.event.updateRSVP(context, params);
@@ -144,12 +159,14 @@ function updateRSVP({ services, context }, params) {
 
 /**
  * Post RSVP response to Event
- * @param {Context} context
- * @param {Object} params
- * @param {integer} params.eid The id of the event
- * @param {String} params.status The attendence status of user
- * @param {String} [params.reason] The reason for stated status
- * @return {Object.&lt;Void>}
+ * 
+ * @description POST /api/createRSVP
+ * @summary Authentication is required
+ *
+ * @param {integer} eid The id of the event
+ * @param {String} status The attendence status of user
+ * @param {String} [reason] The reason for stated status
+ * @return {Void}
 */
 async function createRSVP({ services, context }, params) {
   await services.event.createRSVP(context, params);
@@ -170,7 +187,7 @@ async function createRSVP({ services, context }, params) {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Thu Sep 07 2017 11:14:10 GMT-0700 (PDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Wed Sep 13 2017 17:42:04 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>
