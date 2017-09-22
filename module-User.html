@@ -64,7 +64,7 @@
     
 
     
-    <h4 class="name" id="~blockUser"><span class="type-signature">(inner) </span>blockUser<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~blockUser"><span class="type-signature">(inner) </span>blockUser<span class="signature">(blockeeId)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
     
@@ -110,7 +110,7 @@
 
         <tr>
             
-                <td class="name"><code>params.blockeeId</code></td>
+                <td class="name"><code>blockeeId</code></td>
             
 
             <td class="type">
@@ -193,11 +193,19 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Void
-</div>
 
 
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Void</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -211,7 +219,7 @@
     
 
     
-    <h4 class="name" id="~getUserWithId"><span class="type-signature">(async, inner) </span>getUserWithId<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~getUserWithId"><span class="type-signature">(async, inner) </span>getUserWithId<span class="signature">(id)</span><span class="type-signature"> &rarr; {User}</span></h4>
     
 
     
@@ -255,7 +263,7 @@
 
         <tr>
             
-                <td class="name"><code>params.id</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
@@ -339,10 +347,22 @@
 
         
 <div class="param-desc">
-    User} User
+    User
 </div>
 
 
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">User</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -356,7 +376,7 @@
     
 
     
-    <h4 class="name" id="~getUserWithUid"><span class="type-signature">(async, inner) </span>getUserWithUid<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~getUserWithUid"><span class="type-signature">(async, inner) </span>getUserWithUid<span class="signature">(uid)</span><span class="type-signature"> &rarr; {User}</span></h4>
     
 
     
@@ -400,7 +420,7 @@
 
         <tr>
             
-                <td class="name"><code>params.uid</code></td>
+                <td class="name"><code>uid</code></td>
             
 
             <td class="type">
@@ -484,10 +504,22 @@
 
         
 <div class="param-desc">
-    User User
+    User
 </div>
 
 
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">User</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -501,7 +533,7 @@
     
 
     
-    <h4 class="name" id="~isBlockedByEid"><span class="type-signature">(async, inner) </span>isBlockedByEid<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~isBlockedByEid"><span class="type-signature">(async, inner) </span>isBlockedByEid<span class="signature">(id, uid)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
     
 
     
@@ -545,7 +577,7 @@
 
         <tr>
             
-                <td class="name"><code>params.id</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
@@ -562,6 +594,29 @@
             
 
             <td class="description last">The id of the event</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>uid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The uid of potential blockee</td>
         </tr>
 
     
@@ -602,7 +657,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="user.js.html">user.js</a>, <a href="user.js.html#line99">line 99</a>
+        <a href="user.js.html">user.js</a>, <a href="user.js.html#line100">line 100</a>
     </li></ul></dd>
     
 
@@ -629,10 +684,22 @@
 
         
 <div class="param-desc">
-    Boolean isBlocked - True if blocked, false otherwise
+    isBlocked
 </div>
 
 
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -646,7 +713,7 @@
     
 
     
-    <h4 class="name" id="~unblockUser"><span class="type-signature">(inner) </span>unblockUser<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~unblockUser"><span class="type-signature">(inner) </span>unblockUser<span class="signature">(blockeeId)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
     
@@ -692,7 +759,7 @@
 
         <tr>
             
-                <td class="name"><code>params.blockeeId</code></td>
+                <td class="name"><code>blockeeId</code></td>
             
 
             <td class="type">
@@ -775,11 +842,19 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Void
-</div>
 
 
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Void</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -793,7 +868,7 @@
     
 
     
-    <h4 class="name" id="~updateUser"><span class="type-signature">(inner) </span>updateUser<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~updateUser"><span class="type-signature">(inner) </span>updateUser<span class="signature">(name<span class="signature-attributes">opt</span>, email<span class="signature-attributes">opt</span>, birthdate<span class="signature-attributes">opt</span>, gender<span class="signature-attributes">opt</span>, avatarUrl<span class="signature-attributes">opt</span>, description<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
     
@@ -841,7 +916,7 @@
 
         <tr>
             
-                <td class="name"><code>params.name</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
@@ -874,7 +949,7 @@
 
         <tr>
             
-                <td class="name"><code>params.email</code></td>
+                <td class="name"><code>email</code></td>
             
 
             <td class="type">
@@ -907,7 +982,7 @@
 
         <tr>
             
-                <td class="name"><code>params.birthdate</code></td>
+                <td class="name"><code>birthdate</code></td>
             
 
             <td class="type">
@@ -940,7 +1015,7 @@
 
         <tr>
             
-                <td class="name"><code>params.gender</code></td>
+                <td class="name"><code>gender</code></td>
             
 
             <td class="type">
@@ -973,7 +1048,7 @@
 
         <tr>
             
-                <td class="name"><code>params.avatarUrl</code></td>
+                <td class="name"><code>avatarUrl</code></td>
             
 
             <td class="type">
@@ -1006,7 +1081,7 @@
 
         <tr>
             
-                <td class="name"><code>params.description</code></td>
+                <td class="name"><code>description</code></td>
             
 
             <td class="type">
@@ -1099,11 +1174,19 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Void
-</div>
 
 
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Void</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -1133,7 +1216,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Wed Sep 13 2017 17:42:04 GMT-0700 (PDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Fri Sep 22 2017 14:37:32 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>
