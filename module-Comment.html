@@ -64,15 +64,17 @@
     
 
     
-    <h4 class="name" id="~createComment"><span class="type-signature">(async, inner) </span>createComment<span class="signature">(params)</span><span class="type-signature"> &rarr; {Object.&lt;Number>}</span></h4>
+    <h4 class="name" id="~POST/api/createComment"><span class="type-signature">(inner) </span>POST /api/createComment<span class="signature">(eid, body)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
 
 <div class="description">
-    Create new comment
+    Creates a new Comment
 </div>
 
 
@@ -85,71 +87,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code></code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -219,13 +156,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -260,11 +190,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="comment.js.html">comment.js</a>, <a href="comment.js.html#line34">line 34</a>
-=======
         <a href="comment.js.html">comment.js</a>, <a href="comment.js.html#line28">line 28</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -302,7 +228,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Number></span>
+<span class="param-type">Number</span>
 
 
     </dd>
@@ -320,9 +246,11 @@
     
 
     
-    <h4 class="name" id="~deleteComment"><span class="type-signature">(inner) </span>deleteComment<span class="signature">(params)</span><span class="type-signature"> &rarr; {Object.&lt;Void>}</span></h4>
+    <h4 class="name" id="~POST/api/deleteComment"><span class="type-signature">(inner) </span>POST /api/deleteComment<span class="signature">(id)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
@@ -341,71 +269,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code></code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -452,13 +315,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -493,11 +349,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="comment.js.html">comment.js</a>, <a href="comment.js.html#line46">line 46</a>
-=======
         <a href="comment.js.html">comment.js</a>, <a href="comment.js.html#line43">line 43</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -531,7 +383,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Void></span>
+<span class="param-type">Void</span>
 
 
     </dd>
@@ -549,7 +401,7 @@
     
 
     
-    <h4 class="name" id="~getComments"><span class="type-signature">(async, inner) </span>getComments<span class="signature">(params)</span><span class="type-signature"> &rarr; {Object.&lt;Array.&lt;Comment>>}</span></h4>
+    <h4 class="name" id="~POST/api/getComments"><span class="type-signature">(inner) </span>POST /api/getComments<span class="signature">(eid, offset)</span><span class="type-signature"> &rarr; {Array.&lt;Comment>}</span></h4>
     
 
     
@@ -570,71 +422,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code></code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -704,13 +491,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -745,11 +525,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="comment.js.html">comment.js</a>, <a href="comment.js.html#line21">line 21</a>
-=======
         <a href="comment.js.html">comment.js</a>, <a href="comment.js.html#line13">line 13</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -787,7 +563,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Array.&lt;Comment>></span>
+<span class="param-type">Array.&lt;Comment></span>
 
 
     </dd>
@@ -821,11 +597,7 @@
 <br class="clear">
 
 <footer>
-<<<<<<< HEAD
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Thu Sep 07 2017 11:14:10 GMT-0700 (PDT)
-=======
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Fri Sep 22 2017 14:37:32 GMT-0700 (PDT)
->>>>>>> 823406f... authentication update
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Fri Sep 22 2017 15:00:15 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>

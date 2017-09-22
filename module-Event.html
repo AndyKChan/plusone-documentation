@@ -64,15 +64,17 @@
     
 
     
-    <h4 class="name" id="~createEvent"><span class="type-signature">(async, inner) </span>createEvent<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Number>}</span></h4>
+    <h4 class="name" id="~createEvent"><span class="type-signature">(async, inner) </span>createEvent<span class="signature">(sport, ts, lat, lon, title, description<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, url<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
 
 <div class="description">
-    Create a new event
+    POST /api/createEvent
 </div>
 
 
@@ -85,71 +87,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -429,13 +366,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -470,11 +400,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line32">line 32</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line41">line 41</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -512,7 +438,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Number></span>
+<span class="param-type">Number</span>
 
 
     </dd>
@@ -530,15 +456,17 @@
     
 
     
-    <h4 class="name" id="~createRSVP"><span class="type-signature">(async, inner) </span>createRSVP<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Void>}</span></h4>
+    <h4 class="name" id="~createRSVP"><span class="type-signature">(async, inner) </span>createRSVP<span class="signature">(eid, status, reason<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
 
 <div class="description">
-    Post RSVP response to Event
+    POST /api/createRSVP
 </div>
 
 
@@ -551,71 +479,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -736,13 +599,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -777,11 +633,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line126">line 126</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line146">line 146</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -815,7 +667,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Void></span>
+<span class="param-type">Void</span>
 
 
     </dd>
@@ -833,15 +685,17 @@
     
 
     
-    <h4 class="name" id="~deleteEvent"><span class="type-signature">(async, inner) </span>deleteEvent<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Void>}</span></h4>
+    <h4 class="name" id="~deleteEvent"><span class="type-signature">(async, inner) </span>deleteEvent<span class="signature">(eid)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
 
 <div class="description">
-    Delete an event
+    POST /api/deleteEvent
 </div>
 
 
@@ -854,71 +708,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -965,13 +754,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -1006,11 +788,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line75">line 75</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line89">line 89</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -1044,7 +822,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Void></span>
+<span class="param-type">Void</span>
 
 
     </dd>
@@ -1062,11 +840,7 @@
     
 
     
-<<<<<<< HEAD
-    <h4 class="name" id="~getEvent"><span class="type-signature">(async, inner) </span>getEvent<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Event>}</span></h4>
-=======
     <h4 class="name" id="~getEvent"><span class="type-signature">(async, inner) </span>getEvent<span class="signature">(id)</span><span class="type-signature"> &rarr; {Event}</span></h4>
->>>>>>> 823406f... authentication update
     
 
     
@@ -1075,6 +849,8 @@
 
 <div class="description">
     Get an event
+
+POST /api/getEvent
 </div>
 
 
@@ -1110,76 +886,7 @@
 
         <tr>
             
-<<<<<<< HEAD
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>eid</code></td>
-=======
                 <td class="name"><code>id</code></td>
->>>>>>> 823406f... authentication update
             
 
             <td class="type">
@@ -1202,13 +909,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -1243,11 +943,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line44">line 44</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line54">line 54</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -1285,7 +981,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Event></span>
+<span class="param-type">Event</span>
 
 
     </dd>
@@ -1303,7 +999,7 @@
     
 
     
-    <h4 class="name" id="~getEventRSVPs"><span class="type-signature">(async, inner) </span>getEventRSVPs<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Array.&lt;RSVP>>}</span></h4>
+    <h4 class="name" id="~getEventRSVPs"><span class="type-signature">(async, inner) </span>getEventRSVPs<span class="signature">(eid)</span><span class="type-signature"> &rarr; {Array.&lt;RSVP>}</span></h4>
     
 
     
@@ -1312,6 +1008,8 @@
 
 <div class="description">
     Get a list of RSVPs for an Event
+
+POST /api/getEventRSVPs
 </div>
 
 
@@ -1324,71 +1022,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -1435,13 +1068,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -1476,11 +1102,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line98">line 98</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line114">line 114</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -1518,7 +1140,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Array.&lt;RSVP>></span>
+<span class="param-type">Array.&lt;RSVP></span>
 
 
     </dd>
@@ -1536,7 +1158,7 @@
     
 
     
-    <h4 class="name" id="~getUserRSVPs"><span class="type-signature">(async, inner) </span>getUserRSVPs<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Array.&lt;RSVP>>}</span></h4>
+    <h4 class="name" id="~getUserRSVPs"><span class="type-signature">(async, inner) </span>getUserRSVPs<span class="signature">(uid)</span><span class="type-signature"> &rarr; {Array.&lt;RSVP>}</span></h4>
     
 
     
@@ -1545,6 +1167,8 @@
 
 <div class="description">
     Get a list of RSVPs for a User
+
+POST /api/getUserRSVPs
 </div>
 
 
@@ -1557,71 +1181,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -1668,13 +1227,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -1709,11 +1261,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line86">line 86</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line101">line 101</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -1751,7 +1299,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Array.&lt;RSVP>></span>
+<span class="param-type">Array.&lt;RSVP></span>
 
 
     </dd>
@@ -1769,19 +1317,17 @@
     
 
     
-<<<<<<< HEAD
-    <h4 class="name" id="~updateEvent"><span class="type-signature">(inner) </span>updateEvent<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Void>}</span></h4>
-=======
     <h4 class="name" id="~updateEvent"><span class="type-signature">(inner) </span>updateEvent<span class="signature">(id, sport<span class="signature-attributes">opt</span>, ts<span class="signature-attributes">opt</span>, lat<span class="signature-attributes">opt</span>, lon<span class="signature-attributes">opt</span>, title<span class="signature-attributes">opt</span>, description<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, url<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Void}</span></h4>
->>>>>>> 823406f... authentication update
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
 
 <div class="description">
-    Update an event
+    POST /api/updateEvent
 </div>
 
 
@@ -1794,71 +1340,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -2179,13 +1660,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -2220,11 +1694,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line64">line 64</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line75">line 75</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -2258,7 +1728,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Void></span>
+<span class="param-type">Void</span>
 
 
     </dd>
@@ -2276,15 +1746,17 @@
     
 
     
-    <h4 class="name" id="~updateRSVP"><span class="type-signature">(inner) </span>updateRSVP<span class="signature">(context, params)</span><span class="type-signature"> &rarr; {Object.&lt;Void>}</span></h4>
+    <h4 class="name" id="~updateRSVP"><span class="type-signature">(inner) </span>updateRSVP<span class="signature">(uid, eid, status, reason<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
 
 <div class="description">
-    Update an RSVP response
+    POST /api/updateRSVP
 </div>
 
 
@@ -2297,71 +1769,6 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>context</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Context</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
 
 <table class="params">
     <thead>
@@ -2513,13 +1920,6 @@
     </tbody>
 </table>
 
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
 
 
 
@@ -2554,11 +1954,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-<<<<<<< HEAD
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line113">line 113</a>
-=======
         <a href="event.js.html">event.js</a>, <a href="event.js.html#line131">line 131</a>
->>>>>>> 823406f... authentication update
     </li></ul></dd>
     
 
@@ -2592,7 +1988,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Void></span>
+<span class="param-type">Void</span>
 
 
     </dd>
@@ -2626,11 +2022,7 @@
 <br class="clear">
 
 <footer>
-<<<<<<< HEAD
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Thu Sep 07 2017 11:14:10 GMT-0700 (PDT)
-=======
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Fri Sep 22 2017 14:37:32 GMT-0700 (PDT)
->>>>>>> 823406f... authentication update
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Fri Sep 22 2017 15:00:15 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>
