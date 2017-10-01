@@ -64,7 +64,7 @@
     
 
     
-    <h4 class="name" id="~createEvent"><span class="type-signature">(async, inner) </span>createEvent<span class="signature">(sport, ts, lat, lon, title, description<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, url<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+    <h4 class="name" id="~createEvent"><span class="type-signature">(async, inner) </span>createEvent<span class="signature">(sport, title, startTime<span class="signature-attributes">opt</span>, endTime<span class="signature-attributes">opt</span>, coordinates<span class="signature-attributes">opt</span>, address<span class="signature-attributes">opt</span>, description<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, spots<span class="signature-attributes">opt</span>, url<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
 
     
@@ -143,7 +143,38 @@
 
         <tr>
             
-                <td class="name"><code>ts</code></td>
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
             
 
             <td class="type">
@@ -157,6 +188,8 @@
 
             
                 <td class="attributes">
+                
+                    &lt;optional><br>
                 
 
                 
@@ -174,7 +207,7 @@
 
         <tr>
             
-                <td class="name"><code>lat</code></td>
+                <td class="name"><code>endTime</code></td>
             
 
             <td class="type">
@@ -189,36 +222,7 @@
             
                 <td class="attributes">
                 
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>lon</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
+                    &lt;optional><br>
                 
 
                 
@@ -229,14 +233,14 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">Timestamp</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>title</code></td>
+                <td class="name"><code>coordinates</code></td>
             
 
             <td class="type">
@@ -250,6 +254,41 @@
 
             
                 <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Defaults at '49.2827, -123.1207'. It should be in the format: lat, lon</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
                 
 
                 
@@ -333,6 +372,39 @@
 
         <tr>
             
+                <td class="name"><code>spots</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The number of available spots left in the event</td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>url</code></td>
             
 
@@ -400,7 +472,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line41">line 41</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -633,7 +705,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line146">line 146</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line150">line 150</a>
     </li></ul></dd>
     
 
@@ -788,7 +860,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line89">line 89</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line93">line 93</a>
     </li></ul></dd>
     
 
@@ -943,7 +1015,7 @@ POST /api/getEvent
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line54">line 54</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line56">line 56</a>
     </li></ul></dd>
     
 
@@ -1102,7 +1174,7 @@ POST /api/getEventRSVPs
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line114">line 114</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line118">line 118</a>
     </li></ul></dd>
     
 
@@ -1261,7 +1333,7 @@ POST /api/getUserRSVPs
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line101">line 101</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line105">line 105</a>
     </li></ul></dd>
     
 
@@ -1317,7 +1389,7 @@ POST /api/getUserRSVPs
     
 
     
-    <h4 class="name" id="~updateEvent"><span class="type-signature">(inner) </span>updateEvent<span class="signature">(id, sport<span class="signature-attributes">opt</span>, ts<span class="signature-attributes">opt</span>, lat<span class="signature-attributes">opt</span>, lon<span class="signature-attributes">opt</span>, title<span class="signature-attributes">opt</span>, description<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, url<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Void}</span></h4>
+    <h4 class="name" id="~updateEvent"><span class="type-signature">(inner) </span>updateEvent<span class="signature">(id, sport<span class="signature-attributes">opt</span>, startTime<span class="signature-attributes">opt</span>, endTime<span class="signature-attributes">opt</span>, coordinates<span class="signature-attributes">opt</span>, address<span class="signature-attributes">opt</span>, title<span class="signature-attributes">opt</span>, description<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, spots<span class="signature-attributes">opt</span>, url<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
     
@@ -1429,7 +1501,7 @@ POST /api/getUserRSVPs
 
         <tr>
             
-                <td class="name"><code>ts</code></td>
+                <td class="name"><code>startTime</code></td>
             
 
             <td class="type">
@@ -1462,7 +1534,7 @@ POST /api/getUserRSVPs
 
         <tr>
             
-                <td class="name"><code>lat</code></td>
+                <td class="name"><code>endTime</code></td>
             
 
             <td class="type">
@@ -1495,13 +1567,46 @@ POST /api/getUserRSVPs
 
         <tr>
             
-                <td class="name"><code>lon</code></td>
+                <td class="name"><code>coordinates</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
 
 
             
@@ -1627,6 +1732,39 @@ POST /api/getUserRSVPs
 
         <tr>
             
+                <td class="name"><code>spots</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>url</code></td>
             
 
@@ -1694,7 +1832,7 @@ POST /api/getUserRSVPs
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line75">line 75</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line79">line 79</a>
     </li></ul></dd>
     
 
@@ -1954,7 +2092,7 @@ POST /api/getUserRSVPs
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="event.js.html">event.js</a>, <a href="event.js.html#line131">line 131</a>
+        <a href="event.js.html">event.js</a>, <a href="event.js.html#line135">line 135</a>
     </li></ul></dd>
     
 
@@ -2022,7 +2160,7 @@ POST /api/getUserRSVPs
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Fri Sep 22 2017 15:00:15 GMT-0700 (PDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Sat Sep 30 2017 21:54:32 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>
