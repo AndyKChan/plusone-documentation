@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: Authentication</title>
+    <title>JSDoc: Global</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: Authentication</h1>
+    <h1 class="page-title">Global</h1>
 
     
 
@@ -28,6 +28,7 @@
 
 <header>
     
+        <h2></h2>
         
     
 </header>
@@ -36,6 +37,45 @@
     <div class="container-overview">
     
         
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
 
         
     
@@ -64,7 +104,7 @@
     
 
     
-    <h4 class="name" id="~POST/api/authenticateFb"><span class="type-signature">(inner) </span>POST /api/authenticateFb<span class="signature">(username<span class="signature-attributes">opt</span>, name<span class="signature-attributes">opt</span>, email, birthdate<span class="signature-attributes">opt</span>, token, type)</span><span class="type-signature"> &rarr; {Object.&lt;Boolean, String, String, Number>}</span></h4>
+    <h4 class="name" id="POST/api/getEvents"><span class="type-signature"></span>POST /api/getEvents<span class="signature">(lat<span class="signature-attributes">opt</span>, lon<span class="signature-attributes">opt</span>, sport<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, date<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object.&lt;Array.&lt;Event>>}</span></h4>
     
 
     
@@ -72,7 +112,7 @@
 
 
 <div class="description">
-    FB user registration and login
+    Queries for events and can be filtered by location, sport, difficulty, and date
 </div>
 
 
@@ -110,104 +150,7 @@
 
         <tr>
             
-                <td class="name"><code>username</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Required for first time user</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>email</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>birthdate</code></td>
+                <td class="name"><code>lat</code></td>
             
 
             <td class="type">
@@ -233,37 +176,6 @@
 
             
 
-            <td class="description last">Required for first time user and should be a ts</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>token</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
             <td class="description last"></td>
         </tr>
 
@@ -271,44 +183,13 @@
 
         <tr>
             
-                <td class="name"><code>type</code></td>
+                <td class="name"><code>lon</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The type of token (ie. 'Facebook')</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>.gender</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+<span class="param-type">Number</span>
 
 
             
@@ -328,14 +209,14 @@
 
             
 
-            <td class="description last">Should only be either "M" or "F" case-sensitive</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>.avatarUrl</code></td>
+                <td class="name"><code>sport</code></td>
             
 
             <td class="type">
@@ -368,7 +249,40 @@
 
         <tr>
             
-                <td class="name"><code>.description</code></td>
+                <td class="name"><code>difficulty</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>date</code></td>
             
 
             <td class="type">
@@ -435,7 +349,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="auth.js.html">auth.js</a>, <a href="auth.js.html#line12">line 12</a>
+        <a href="search.js.html">search.js</a>, <a href="search.js.html#line10">line 10</a>
     </li></ul></dd>
     
 
@@ -462,7 +376,7 @@
 
         
 <div class="param-desc">
-    An object containing a flag representating whether or not a user exists where true means user already exists, an access token, refresh token, and uid
+    An object named "events" that contains an array of event objects
 </div>
 
 
@@ -473,7 +387,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object.&lt;Boolean, String, String, Number></span>
+<span class="param-type">Object.&lt;Array.&lt;Event>></span>
 
 
     </dd>
@@ -491,7 +405,7 @@
     
 
     
-    <h4 class="name" id="~POST/api/refreshToken"><span class="type-signature">(inner) </span>POST /api/refreshToken<span class="signature">(username<span class="signature-attributes">opt</span>, email<span class="signature-attributes">opt</span>, refreshToken)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="POST/api/getEventsByLocation"><span class="type-signature"></span>POST /api/getEventsByLocation<span class="signature">(lat_t, lon_t, lat_b, lon_b, sport<span class="signature-attributes">opt</span>, difficulty<span class="signature-attributes">opt</span>, date<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object.&lt;Array.&lt;Event>>}</span></h4>
     
 
     
@@ -499,7 +413,7 @@
 
 
 <div class="description">
-    creates a new access token
+    Queries for events in a specific location and can be filtered by sport, difficulty, and date
 </div>
 
 
@@ -537,7 +451,131 @@
 
         <tr>
             
-                <td class="name"><code>username</code></td>
+                <td class="name"><code>lat_t</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Top left lat</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lon_t</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Top left lon</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lat_b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Bottom right lat</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lon_b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Bottom right lon</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sport</code></td>
             
 
             <td class="type">
@@ -563,14 +601,14 @@
 
             
 
-            <td class="description last">Optional if email is provided</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>email</code></td>
+                <td class="name"><code>difficulty</code></td>
             
 
             <td class="type">
@@ -596,14 +634,14 @@
 
             
 
-            <td class="description last">Optional if username is provided</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>refreshToken</code></td>
+                <td class="name"><code>date</code></td>
             
 
             <td class="type">
@@ -617,6 +655,8 @@
 
             
                 <td class="attributes">
+                
+                    &lt;optional><br>
                 
 
                 
@@ -668,7 +708,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="auth.js.html">auth.js</a>, <a href="auth.js.html#line32">line 32</a>
+        <a href="search.js.html">search.js</a>, <a href="search.js.html#line29">line 29</a>
     </li></ul></dd>
     
 
@@ -695,7 +735,7 @@
 
         
 <div class="param-desc">
-    Should return updated access token
+    An object named "events" that contains an array of event objects
 </div>
 
 
@@ -706,7 +746,7 @@
     </dt>
     <dd>
         
-<span class="param-type">String</span>
+<span class="param-type">Object.&lt;Array.&lt;Event>></span>
 
 
     </dd>
