@@ -64,7 +64,7 @@
     
 
     
-    <h4 class="name" id="~POST/api/authenticateFb"><span class="type-signature">(inner) </span>POST /api/authenticateFb<span class="signature">(username<span class="signature-attributes">opt</span>, name<span class="signature-attributes">opt</span>, email, birthdate<span class="signature-attributes">opt</span>, token, type)</span><span class="type-signature"> &rarr; {Object.&lt;Boolean, String, String, Number>}</span></h4>
+    <h4 class="name" id="~POST/api/authenticate"><span class="type-signature">(inner) </span>POST /api/authenticate<span class="signature">(email, token, type, name<span class="signature-attributes">opt</span>, avatarUrl<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object.&lt;Boolean, String, String, Number>}</span></h4>
     
 
     
@@ -110,72 +110,6 @@
 
         <tr>
             
-                <td class="name"><code>username</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Required for first time user</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>email</code></td>
             
 
@@ -201,39 +135,6 @@
             
 
             <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>birthdate</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Required for first time user and should be a ts</td>
         </tr>
 
     
@@ -302,7 +203,7 @@
 
         <tr>
             
-                <td class="name"><code>.gender</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
@@ -328,47 +229,14 @@
 
             
 
-            <td class="description last">Should only be either "M" or "F" case-sensitive</td>
+            <td class="description last">Required for first time user</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>.avatarUrl</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>.description</code></td>
+                <td class="name"><code>avatarUrl</code></td>
             
 
             <td class="type">
@@ -491,9 +359,11 @@
     
 
     
-    <h4 class="name" id="~POST/api/refreshToken"><span class="type-signature">(inner) </span>POST /api/refreshToken<span class="signature">(username<span class="signature-attributes">opt</span>, email<span class="signature-attributes">opt</span>, refreshToken)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="~POST/api/refreshToken"><span class="type-signature">(inner) </span>POST /api/refreshToken<span class="signature">(refreshToken)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
+    
+    <p class="summary">Authentication is required</p>
     
 
 
@@ -523,8 +393,6 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
         
 
@@ -533,72 +401,6 @@
     </thead>
 
     <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>username</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Optional if email is provided</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>email</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Optional if username is provided</td>
-        </tr>
-
     
 
         <tr>
@@ -615,14 +417,6 @@
             
             </td>
 
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
             
 
             
@@ -668,7 +462,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="auth.js.html">auth.js</a>, <a href="auth.js.html#line32">line 32</a>
+        <a href="auth.js.html">auth.js</a>, <a href="auth.js.html#line28">line 28</a>
     </li></ul></dd>
     
 
@@ -740,7 +534,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Mon Oct 02 2017 17:47:11 GMT-0700 (PDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Tue Oct 03 2017 18:08:50 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>
